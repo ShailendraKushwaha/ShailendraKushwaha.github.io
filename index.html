@@ -3,162 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name • Portfolio</title>
+  <title>Shailendra  • Portfolio</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: rgba(255,255,255,0.06);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #020617, #020617 40%, #020617);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* ---------- PARALLAX BACKGROUND ---------- */
-    .parallax {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
-                  radial-gradient(circle at 80% 80%, rgba(168,85,247,0.15), transparent 40%);
-      z-index: -1;
-      transform: translateZ(0);
-    }
-
-    /* ---------- LAYOUT ---------- */
-    section {
-      min-height: 100vh;
-      padding: 6rem 8vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* ---------- HERO ---------- */
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 700;
-      line-height: 1.1;
-    }
-
-    .hero span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      margin-top: 1.2rem;
-      max-width: 600px;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    .hero a {
-      margin-top: 2.5rem;
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .hero a:hover {
-      background: var(--accent);
-      color: #020617;
-      transform: translateY(-3px);
-    }
-
-    /* ---------- SECTION TITLES ---------- */
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    /* ---------- CARDS ---------- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 1.5rem;
-      backdrop-filter: blur(10px);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* ---------- SCROLL ANIMATIONS ---------- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="logo">Shailendra Kushwaha</span>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#experience">Experience</a>
+        <!-- <a href="#projects">Projects</a>
+        <a href="#blog">Writing</a> -->
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
   <div class="parallax" id="parallax"></div>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Hello, I'm <span>Your Name</span></h1>
-    <p>
-      Software Engineer • iOS Developer • Full Stack Enthusiast
-      <br />I build clean, scalable, and high‑performance applications.
-    </p>
-    <a href="#projects">View My Work</a>
+    <div class="hero-header">
+      <div>
+        <h1>Hello, I'm <span>Shailendra </span></h1>
+        <p class="hero-role">Senior Software Engineer (iOS) • Full Stack Developer</p>
+      </div>
+      <img src="profile.jpg" alt="Profile photo" class="hero-image" />
+    </div>
+    <p>I build apps that run fast, scale effortlessly, and look good doing it.<br/>Because your users deserve nothing less.</p>
+    <a href="resume.pdf" target="_blank">Download Resume</a>
+
+    <div class="hero-socials" id="connect">
+      <a href="https://github.com/ShailendraKushwaha" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/shailendrakkumar/" target="_blank">LinkedIn</a>
+      <a href="mailto:shailkushwaha86@gmail.com">Email</a>
+    </div>
+
+    <div class="grid" style="margin-top:3rem">
+      <div class="card"><h3>10+ Apps</h3><p>Production iOS apps shipped</p></div>
+      <div class="card"><h3>5M+ Users</h3><p>Products impacted globally</p></div>
+      <div class="card"><h3>99.9%</h3><p>Crash-free sessions</p></div>
+    </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2 class="reveal">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item left reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Senior Software Engineer</h3>
+          <span class="writing-meta">Evora IT Solutions</span>
+          <p>Managing Enterprise and Organisational Apple account for Apps and Certificates.
+<br>Working with UIKit , SwiftUI to create extension USer Interfaces
+<br>Working on legacy Objective C Codes in Framework,
+<br>Working with Gitlab to create pipelines for submitting apps to testflight.
+<br>Working with sourcetree /git for code and version management
+<br>Oversaw the creation of Framework in all organization
+<br>Directing whole iOS App creation to Publishing across teams in the
+company.
+<br>Taking care of the architecture technology and Code review for all
+iOS apps in the company. Working with SAP MDK to create hybrid apps</p>
+        </div>
+      </div>
+      <div class="timeline-item right reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Senior Software Engineer</h3>
+          <span class="writing-meta">AppInventiv</span>
+          <p>Handling modules in iOS apps using a team of developers, 
+           <br> involved in Code Review,Code Optimisations , Xcode instruments and mentoring new developers. 
+           <br>Responsible for inhouse developments of some common Pods in Combine framework, 
+           <br>Wrote Unit tests for all of the apps, Worked with NFC, In APP Purchases , Combine and Concurrency</p>
+        </div>
+      </div>
+      <div class="timeline-line"></div>
+      <div class="timeline-item left reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Software Engineer</h3>
+          <span class="writing-meta">TFT (This for That)</span>
+          <p>Handled Creating Product iOS App of company from scratch,
+            <br>converted and optimized codebase to Native iOS,
+            <br>implemented Complex API Handling and Complex UIs, 
+            <br>Implemented complex algorithms for swapping apparel and credit.
+            <br> Managed to create a lightweight app despite being the complex
+        </p>
+        </div>
+      </div>
+      <div class="timeline-item right reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Software Engineer</h3>
+          <span class="writing-meta">Triffort Technologies</span>
+          <p>Created Projects from Scratch,
+            <br> Started coding UIs without storyboards,
+            <br>Learned Cocoapods, swift, Objective C ,
+            <br> Learned App Publishing , Human Interface Guideline, API Handling and Multithreading in Swift</p>
+        </div>
+      </div>
+      <!-- <div class="timeline-line"></div>
+      <div class="timeline-item left reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Senior Software Engineer</h3>
+          <span class="writing-meta">Evora IT Solutions</span>
+          <p>Led iOS and backend architecture. Drove performance, scalability, and clean system design.</p>
+        </div>
+      </div>
+      <div class="timeline-item right reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-card">
+          <h3>Senior Software Engineer</h3>
+          <span class="writing-meta">Evora IT Solutions</span>
+          <p>Led iOS and backend architecture. Drove performance, scalability, and clean system design.</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+   <!-- PROJECTS -->
   <section id="projects">
     <h2 class="reveal">Projects</h2>
     <div class="grid">
@@ -187,38 +159,67 @@
     </div>
   </section>
 
+  <!-- Writing Section -->
+<!-- <section id="writing"> -->
+  <!-- <h2 class="reveal">Writing</h2>
+
+  <p class="reveal" style="max-width:700px; color:var(--muted); margin-bottom:2.5rem;">
+    I occasionally write about iOS development, system design, performance tuning, and lessons learned from building production-grade software.
+    The goal is simple: share practical insights without unnecessary fluff.
+  </p>
+
+  <div class="writing-list reveal">
+    <a href="#" class="writing-card">
+      <span class="writing-meta">iOS • Performance</span>
+      <h3>Optimizing iOS App Launch Time Without Sacrificing Architecture</h3>
+      <p>A practical guide to reducing launch time while keeping your codebase clean and maintainable.</p>
+    </a>
+
+    <a href="#" class="writing-card">
+      <span class="writing-meta">System Design</span>
+      <h3>Designing Mobile-First APIs That Scale Gracefully</h3>
+      <p>How to think about APIs from a mobile engineer’s perspective and avoid common backend pitfalls.</p>
+    </a>
+
+    <a href="#" class="writing-card">
+      <span class="writing-meta">Career</span>
+      <h3>What I Look for When Reviewing iOS Code</h3>
+      <p>Patterns, smells, and small details that instantly reveal code quality during reviews.</p>
+    </a>
+  </div>
+</section> -->
   <!-- CONTACT -->
-  <section>
+  <section id="contact">
     <h2 class="reveal">Contact</h2>
     <p class="reveal" style="max-width:600px; color: var(--muted);">
-      Feel free to reach out for collaboration, freelance work, or interesting discussions.
+      Have a project in mind, a challenging problem, or just want to talk tech? Drop a message <a href="#connect">here.</a>
     </p>
+
+    <!-- <form class="contact-form reveal" action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form> -->
   </section>
 
   <footer>
-    © 2025 Your Name • Built for GitHub Pages
+    © 2025 Shailendra Kushwaha • Built for GitHub Pages
   </footer>
 
   <script>
-    // PARALLAX EFFECT
-    document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    document.addEventListener('mousemove', e => {
+      const x = (e.clientX/window.innerWidth-0.5)*20;
+      const y = (e.clientY/window.innerHeight-0.5)*20;
       document.getElementById('parallax').style.transform = `translate(${x}px, ${y}px)`;
     });
-
-    // SCROLL REVEAL
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    reveals.forEach(r => observer.observe(r));
+    const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add('active');}});}, {threshold:0.15});
+    reveals.forEach(r=>observer.observe(r));
   </script>
 
 </body>
 </html>
+
+
+
